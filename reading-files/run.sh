@@ -2,6 +2,6 @@
 
 fname="/tmp/dat"
 
-echo "hello" > "$fname"
-echo "go" >> "$fname"
+echo "hello" >"$fname"
+echo "go" >>"$fname"
 go run reading-files.go "$fname"

@@ -8,7 +8,7 @@ go build "$SOURCE"
 
 # Run different configuration of command-line flags
 
-# "-word=opt -numb=7 -fork -svar=flag" 
+# "-word=opt -numb=7 -fork -svar=flag"
 # gives values to all flags
 
 # "-word=opt"
@@ -27,16 +27,16 @@ go build "$SOURCE"
 # if you provide a flag that wasn't specified to the `flag` package
 # the program will print an error message and show the help text again.
 
-FLAGS=("-word=opt -numb=7 -fork -svar=flag" \
-       "-word=opt" \
-       "-word=opt a1 a2 a3" \
-       "-word=opt a1 a2 a3 -numb=7" \
-       "-h" \
-       "-wat" \
+FLAGS=("-word=opt -numb=7 -fork -svar=flag"
+    "-word=opt"
+    "-word=opt a1 a2 a3"
+    "-word=opt a1 a2 a3 -numb=7"
+    "-h"
+    "-wat"
 )
 
 for fs in "${FLAGS[@]}"; do
-    echo "\$ $EXE $fs" 
+    echo "\$ $EXE $fs"
     "$EXE" $fs
     echo ""
 done
